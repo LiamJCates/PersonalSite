@@ -1,3 +1,8 @@
+/* Button Backgrounds*/
+
+function on(element) { element.style.display = "block"; }
+function off(element) { element.style.display = "none"; }
+
 "use strict";
 
 /**
