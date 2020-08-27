@@ -1,0 +1,95 @@
+/* Welcome Section */
+#welcome-section {
+  width: 100%;
+  height: 100vh;
+  background-color: #193c6d;
+  text-align: center;
+  margin: 0px;
+  overflow: hidden;
+
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  background-repeat: no-repeat;
+  animation: gradient 15s ease infinite;
+}
+
+/* TODO: make cross browser*/
+
+@keyframes gradient {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+.name {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.name-wrapper {
+  line-height: 1;
+  margin-bottom: 1em;
+  position: relative;
+  z-index: 0;
+  white-space:nowrap;
+}
+
+.first {
+  font-family: 'Lobster', cursive;
+  font-size: 11em;
+  font-weight: 300;
+  position: relative;
+  z-index: 3;
+  padding: 0 .23em 0 .02em;
+  background: -webkit-linear-gradient(40deg, rgb(28, 216, 210), rgb(237, 66, 100));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.last {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 13em;
+  font-weight: 900;
+  letter-spacing: -.05em;
+  text-transform: uppercase;
+  margin-left: -1.6em;
+  top: -.13em;
+  position: relative;
+  z-index: 0;
+}
+
+/* Message Text */
+#messenger {
+  position: absolute;
+  top: 130%;
+  left: 50%;
+  height: 41px;
+  transform: translate(-50%, -50%);
+  font-family: monospace;
+  font-size: 28px;
+  white-space: nowrap;
+  text-shadow: 0 2px 2px rgba(#000, 0.9);
+}
+
+@media screen and (max-width: 1200px), screen and (max-height: 800px)  {
+  .first{font-size: 7.5em;}
+  .last{font-size: 9em;}
+  #messenger { font-size: 24px; }
+}
+
+@media screen and (max-width: 800px), screen and (max-height: 500px)  {
+  .first{font-size: 5em;}
+  .last{font-size: 6em;}
+  #messenger { font-size: 20px; }
+  .mouse{ margin: 20px auto;}
+  .scroll{ font-size:10px;}
+}
+
+@media screen and (max-width: 400px), screen and (max-height: 300px) {
+  .first{font-size: 3.2em;}
+  .last{font-size: 4em;}
+  #messenger { font-size: 14px; }
+}

@@ -3,6 +3,21 @@
 function on(element) { element.style.display = "block"; }
 function off(element) { element.style.display = "none"; }
 
+
+/* Settings Bar */
+function closeNav(){
+  document.getElementById('settings').style.display='none';
+  document.getElementById('close').style.display='none';
+  document.getElementById('open').style.display='block';
+}
+function openNav(){
+  document.getElementById('settings').style.display='block';
+  document.getElementById('open').style.display='none';
+  document.getElementById('close').style.display='block';
+}
+
+
+/* Contact Background */
 "use strict";
 
 /**
@@ -14,39 +29,51 @@ function off(element) { element.style.display = "none"; }
 * @since 2019
 */
 
-
-
-
 var nbEddies = 2;
-var nbParticles = 1000; // number of particlez
-var lifeTime = 100; // average lifetime of particlez
+var nbParticles = 300; // number of particlez
+var lifeTime = 20; // average lifetime of particlez
+
+function changeRange(input, fill) {
+  var value = document.getElementById(input).value;
+  var max = document.getElementById(input).max;
+
+  var percent = value/max * 100;
+  if(percent >= 90) percent -= .5; 
+
+  document.getElementById(fill).style.width = percent+ '%';
+}
 
 /* foci slider */
-var foci_slider = document.getElementById("foci-range");
+var foci_slider = document.getElementById("foci-input");
 var foci_output = document.getElementById("foci");
 foci_output.innerHTML = foci_slider.value;
 
 foci_slider.oninput = function() {
+  changeRange('foci-input', 'foci-fill');
   foci_output.innerHTML = this.value;
   nbEddies = this.value;
 }
 
 /* particles slider */
-var particles_slider = document.getElementById("particles-range");
+var particles_slider = document.getElementById("particles-input");
 var particles_output = document.getElementById("particles");
 particles_output.innerHTML = particles_slider.value;
 
 particles_slider.oninput = function() {
+  changeRange('particles-input', 'particles-fill');
+
   particles_output.innerHTML = this.value;
   nbParticles = this.value;
 }
 
 /* lifetime slider */
-var lifetime_slider = document.getElementById("lifetime-range");
+var lifetime_slider = document.getElementById("lifetime-input");
 var lifetime_output = document.getElementById("lifetime");
 lifetime_output.innerHTML = lifetime_slider.value;
 
 lifetime_slider.oninput = function() {
+  changeRange('lifetime-input', 'lifetime-fill');
+
   lifetime_output.innerHTML = this.value;
   lifeTime = this.value;
 }
@@ -55,8 +82,12 @@ function sliderUpdate(){
   foci_output.innerHTML = nbEddies;
   particles_output.innerHTML = nbParticles;
   lifetime_output.innerHTML = lifeTime;
+  changeRange('foci-input', 'foci-fill');
+  changeRange('particles-input', 'particles-fill');
+  changeRange('lifetime-input', 'lifetime-fill');
 }
 sliderUpdate();
+
 
 let canv, ctx;   // canvas and drawing context
 let dimx, dimy;  // size of canvas

@@ -1,8 +1,4 @@
 /*  Projects Background */
-function on(element) { element.style.display = "block"; }
-function off(element) { element.style.display = "none"; }
-
-
 document.getElementById("projects").addEventListener("mousemove", function(event) {
     windowWidth = document.getElementById("projects").offsetWidth;
     windowHeight = document.getElementById("projects").offsetHeight;
@@ -12,7 +8,7 @@ document.getElementById("projects").addEventListener("mousemove", function(event
 
     document.getElementById("projects").style.background =
     'repeating-radial-gradient(circle at ' +
-    (mouseXpercentage-75) + '%' + (mouseYpercentage-200) + '%, \
+    (mouseXpercentage-50) + '%' + (mouseYpercentage-125) + '%, \
     #fedc00 0, #fedc00 calc(01/35 * 100%),\
     #fcb712 0, #fcb712 calc(02/35 * 100%),\
     #f7921e 0, #f7921e calc(03/35 * 100%),\
@@ -49,7 +45,7 @@ document.getElementById("projects").addEventListener("mousemove", function(event
     #fcb712 0, #fcb712 calc(34/35 * 100%),\
     #fedc00 0, #fedc00 100%),' +
     'repeating-radial-gradient(circle at ' +
-    (mouseXpercentage+75) + '%' + (mouseYpercentage-200) + '%,\
+    (mouseXpercentage+50) + '%' + (mouseYpercentage-125) + '%,\
     #fedc00 0, #fedc00 calc(01/35 * 100%),\
     #fcb712 0, #fcb712 calc(02/35 * 100%),\
     #f7921e 0, #f7921e calc(03/35 * 100%),\

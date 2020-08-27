@@ -1,218 +1,55 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="viewport" content="height=device-height, initial-scale=1.0">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="height=device-height, initial-scale=1.0">
 
-  <link rel="stylesheet" type="text/css" href="index.css"/>
+    <link rel="stylesheet" type="text/css" href="css/master.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <title></title>
+  </head>
+  <body>
 
-  <title></title>
-</head>
+    <header>
+      <!-- START NAV -->
+      <nav id="navbar" class="nav">
+        <ul class="block-menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="projects.html">Work</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <!-- END NAV -->
+    </header>
 
-<body>
+    <!-- START WELCOME SECTION -->
 
-  <header>
-    <!-- START NAV -->
-    <nav id="navbar" class="nav">
-      <ul class="block-menu">
-        <li><a href="#welcome-section" class="fill">Home</a></li>
-        <li><a href="#projects" class="fill">Work</a></li>
-        <li><a href="#contact" class="fill">Contact</a></li>
-      </ul>
-    </nav>
-    <!-- END NAV -->
-  </header>
+    <section id="welcome-section">
 
-  <!-- START WELCOME SECTION -->
+      <section class="name">
+        <h1 class="name-wrapper">
+          <span class="first">Liam J.</span>
+          <span class="last">Cates</span>
+        </h1>
+        <div id="messenger"></div>
 
-  <section id="welcome-section">
-
-    <section class="hero">
-      <h1 class="header-wrapper">
-        <span class="first">Liam J.</span>
-        <span class="last">Cates</span>
-      </h1>
-      <div id="messenger"></div>
-
-      <div class="mouse">
-        <div class="mouse-icon">
-          <span class="mouse-wheel"></span>
-        </div>
-        <div class="scroll">scroll</div>
-      </div>
-
+      </section>
     </section>
-  </section>
 
-  <!-- END WELCOME SECTION -->
+    <!-- END WELCOME SECTION -->
 
-  <!-- START PROJECTS SECTION -->
-  <section id="projects" class="projects-section">
-
-    <div class="arrow">
-      <img src="images/arrow-down.png" alt="">
-      arrow key down
-    </div>
-
-    <div class="project-tiles">
-
-      <div class="project-tile" id="algorithms">
-        <a class="project-text" href="https://github.com/LiamJCates/Programming-Notes/blob/master/MoreComingSoon.md" target="_blank">
-          <div class="project-tile-content">
-            <img class="project-tile-img"
-            src="images/algorithms-icon.png" alt="">
-            Algorithms
-          </div>
-        </a>
-      </div>
-
-      <div class="project-tile" id="data-structures">
-        <a class="project-text" href="https://github.com/LiamJCates/Programming-Notes/blob/master/MoreComingSoon.md" target="_blank">
-          <div class="project-tile-content">
-            <img class="project-tile-img"
-            src="images/data-structures-icon.png" alt="">
-            Data Structures
-          </div>
-        </a>
-      </div>
-
-      <div class="project-tile" id="system-design">
-        <a class="project-text" href="https://github.com/LiamJCates/Programming-Notes/blob/master/MoreComingSoon.md" target="_blank">
-          <div class="project-tile-content">
-            <img class="project-tile-img"
-            src="images/system-design-icon.png" alt="">
-            System Design
-          </div>
-        </a>
-      </div>
-
-      <div class="project-tile" id="programming-notes">
-        <a class="project-text" href="https://github.com/LiamJCates/Programming-Notes/blob/master/MoreComingSoon.md" target="_blank">
-          <div class="project-tile-content">
-            <img class="project-tile-img"
-            src="images/programming-notes-icon.png" alt="">
-            Programming Notes
-          </div>
-        </a>
-      </div>
-
-      <div class="project-tile" id="java">
-        <a class="project-text" href="https://github.com/LiamJCates/Programming-Notes/blob/master/MoreComingSoon.md" target="_blank">
-          <div class="project-tile-content">
-            <img class="project-tile-img"
-            src="images/java-icon.png" alt="">
-            Java
-          </div>
-        </a>
-      </div>
-
-      <div class="project-tile" id="python">
-        <a class="project-text" href="https://github.com/LiamJCates/Programming-Notes/blob/master/MoreComingSoon.md" target="_blank">
-          <div class="project-tile-content">
-            <img class="project-tile-img"
-            src="images/python-icon.png" alt="">
-            Python
-          </div>
-        </a>
-      </div>
-
-      <div class="project-tile" id="javascript">
-        <a class="project-text" href="https://github.com/LiamJCates/Programming-Notes/blob/master/MoreComingSoon.md" target="_blank">
-          <div class="project-tile-content">
-            <img class="project-tile-img"
-            src="images/javascript-icon.png" alt="">
-            Javascript
-          </div>
-        </a>
-      </div>
-
-      <div class="project-tile" id="web-dev">
-        <a class="project-text" href="https://github.com/LiamJCates/Programming-Notes/blob/master/MoreComingSoon.md" target="_blank">
-          <div class="project-tile-content">
-            <img class="project-tile-img"
-            src="images/web-dev-icon.png" alt="">
-            Website Development
-          </div>
-        </a>
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- END PROJECTS SECTION -->
-
-  <!-- START CONTACT SECTION -->
-
-  <section id="contact" class="contact-section">
-    <p id="msg1" class="msg">Click screen to art</p>
-    <p id="msg2" class="msg">Click icons to contact</p>
-    <ul id="contacts">
-      <li><a id="profile-link" href="https://github.com/LiamJCates" target="_blank">
-        <div id="contact-one">
-        </div>
-        <img onmouseover="on(document.getElementById('contact-one'))"
-        onmouseout="off(document.getElementById('contact-one'))"
-        src="images/github-icon.png" alt="">
-      </a></li>
-
-      <li><a href="mailto:LiamJCates@gmail.com" target="_blank">
-        <div id="contact-two">
-        </div>
-        <img onmouseover="on(document.getElementById('contact-two'))"
-        onmouseout="off(document.getElementById('contact-two'))"src="images/email-icon.png" alt="">
-      </a></li>
-      <li><a href="https://www.linkedin.com/in/liamjcates/" target="_blank">
-        <div id="contact-three">
-        </div>
-        <img onmouseover="on(document.getElementById('contact-three'))"
-        onmouseout="off(document.getElementById('contact-three'))"src="images/linkedin-icon.png" alt="">
-      </a></li>
-    </ul>
-    <div class="settings" id="open"  onclick="openNav()">Art Options ☰</div>
-    <div class="settings" id="close" onclick="closeNav()">Close X</div>
-    <div class="slidecontainer" id="settings">
-      <div class="slider-box">
-        <div class="slider-value">
-          <p>Foci </p><span id="foci"></span>
-        </div>
-        <input autocomplete="off" type="range" min="1" max="10" value="2" class="slider" id="foci-range"/>
-      </div>
-      <div class="slider-box">
-        <div class="slider-value">
-          <p>Particles </p><span id="particles"></span>
-        </div>
-        <input autocomplete="off" type="range" min="1" max="2000" value="300" class="slider" id="particles-range"/>
-      </div>
-      <div class="slider-box">
-        <div class="slider-value">
-          <p>Length </p><span id="lifetime"></span>
-        </div>
-        <input autocomplete="off" type="range" min="1" max="100" value="20" class="slider" id="lifetime-range"/>
-      </div>
-    </div>
-
-  </section>
-
-  <!-- END CONTACT SECTION -->
-
-  <footer>
-    <p><small>&copy; Copyright 2020, Liam J. Cates</small></p>
-  </footer>
-</body>
-
-<script type="application/javascript"
-src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js">
-</script>
-<script type="application/javascript"
-src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js">
-</script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js">
-</script>
-<script type="application/javascript" src="index.js"></script>
-<script type="application/javascript" src="welcome.js"></script>
-<script type="application/javascript" src="projects.js"></script>
-<script type="application/javascript" src="contact.js"></script>
-
+  </body>
+  <script type="application/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js">
+  </script>
+  <script type="application/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/0.9.0/jquery.mask.min.js">
+  </script>
+  <script type="application/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js">
+  </script>
+  <script type="application/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js">
+  </script>
+  <script type="application/javascript" src="javascript/index.js"></script>
 </html>

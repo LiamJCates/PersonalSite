@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="height=device-height, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="css/master.css"/>
+    <link rel="stylesheet" type="text/css" href="css/contact.css"/>
+
+    <title></title>
+  </head>
+  <body>
+
+    <header>
+      <!-- START NAV -->
+      <nav id="navbar" class="nav">
+        <ul class="block-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Work</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <!-- END NAV -->
+    </header>
+
+
+    <!-- START CONTACT SECTION -->
+    <section id="contact" class="contact-section">
+      <p id="msg1" class="msg">Click screen to art</p>
+      <p id="msg2" class="msg">Click icons to contact</p>
+      <ul id="contacts">
+        <li><a id="profile-link" href="https://github.com/LiamJCates" target="_blank">
+          <div id="contact-one">
+          </div>
+          <img onmouseover="on(document.getElementById('contact-one'))"
+          onmouseout="off(document.getElementById('contact-one'))"
+          src="images/github-icon.png" alt="">
+        </a></li>
+
+        <li><a href="mailto:LiamJCates@gmail.com" target="_blank">
+          <div id="contact-two">
+          </div>
+          <img onmouseover="on(document.getElementById('contact-two'))"
+          onmouseout="off(document.getElementById('contact-two'))"src="images/email-icon.png" alt="">
+        </a></li>
+        <li><a href="https://www.linkedin.com/in/liamjcates/" target="_blank">
+          <div id="contact-three">
+          </div>
+          <img onmouseover="on(document.getElementById('contact-three'))"
+          onmouseout="off(document.getElementById('contact-three'))"src="images/linkedin-icon.png" alt="">
+        </a></li>
+      </ul>
+      <div class="settings" id="open"  onclick="openNav()">Art Options ☰</div>
+      <div class="settings" id="close" onclick="closeNav()">Close X</div>
+
+      <div class="slidecontainer" id="settings">
+        <div class="slider-box">
+          <div class="slider-value">
+            <p>Foci </p><span id="foci"></span>
+          </div>
+          <div class="range">
+            <div class="fill" id="foci-fill"></div>
+            <input autocomplete="off" class="volume-slider" min="0" value="2" max="10" id="foci-input" type="range" />
+          </div>
+        </div>
+        <div class="slider-box">
+          <div class="slider-value">
+            <p>Particles </p><span id="particles"></span>
+          </div>
+          <div class="range">
+            <div class="fill" id="particles-fill"></div>
+            <input autocomplete="off" class="volume-slider" min="1" value="300" max="2000" id="particles-input" type="range" />
+          </div>
+        </div>
+        <div class="slider-box">
+          <div class="slider-value">
+            <p>Length </p><span id="lifetime"></span>
+          </div>
+          <div class="range">
+            <div class="fill" id="lifetime-fill"></div>
+            <input autocomplete="off" class="volume-slider" min="1" value="20" max="200" id="lifetime-input"  type="range" />
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <!-- END CONTACT SECTION -->
+
+    <footer>
+      <p><small>&copy; Copyright 2020, Liam J. Cates</small></p>
+    </footer>
+
+  </body>
+  <script type="application/javascript" src="javascript/contact.js"></script>
+</html>
