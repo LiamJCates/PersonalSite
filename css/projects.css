@@ -1,12 +1,25 @@
 /* Projects */
 #projects{
+  background-color: #222;
+
   width: 100%;
   min-height: 100vh;
-  background-color: #222;
 
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
+#background{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+
+  height: 100%;
+  padding: 0;
+  margin: 0;
   background:
   repeating-radial-gradient(circle at 0% -25%,
     #fedc00 0, #fedc00 calc(01/35 * 100%),
@@ -101,177 +114,87 @@
     -ms-filter: hue-rotate(360deg);
     filter: hue-rotate(360deg);
   }
+
 }
 
-
-.project-tiles{
-  margin: 100px 0px 0px 0px;
+.project-tiles {
+  width: 96%;
+  height: 95%;
+  perspective: 100em;
   position: relative;
   display: flex;
   flex-flow: row wrap;
-  width: 96%;
-  height: 95%;
-}
-
-@media screen and (max-width: 1200px) {
-  .project-tiles{ margin: 0px; }
-}
-
-.project-tile{
-  position: relative;
-  padding: 50px 10px;
-  flex: 25%;
-  flex-grow: 0;
-  border: 20px solid transparent;
-  border-radius: 2%;
-  background-color: transparent;
-
-  -webkit-animation: hue-rotate 30s linear infinite reverse;
-     -moz-animation: hue-rotate 30s linear infinite reverse;
-       -o-animation: hue-rotate 30s linear infinite reverse;
-          animation: hue-rotate 30s linear infinite reverse;
-}
-
-@media screen and (max-width: 1200px) {
-  .project-tile{flex: 50%;}
-}
-
-@media screen and (max-width: 500px) {
-  .project-tile{flex: 100%;}
-}
-
-.project-tile::before{
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-
-
-  width: 100%;
-  height: 100%;
-
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 2%;
-}
-
-.project-tile::after{
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-
-  cursor: pointer;
-
-  width: 100%;
-  height: 100%;
-
-  border-radius: 2%;
-}
-
-.project-tile:hover:after{
-  transition: .8s;
-  border: 2px solid #FFF;
-}
-
-#algorithms:hover:before{
-  filter: hue-rotate(0);
-  background-image: url(../images/algorithms-background.jpg);
-  -webkit-animation: .5s linear visible;
-     -moz-animation: .5s linear visible;
-       -o-animation: .5s linear visible;
-          animation: .5s linear visible;
-}
-#data-structures:hover:before{
-  background-image: url(../images/data-structures-background.jpg);
-  -webkit-animation: .5s linear visible;
-     -moz-animation: .5s linear visible;
-       -o-animation: .5s linear visible;
-          animation: .5s linear visible;
-}
-#programming-notes:hover:before{
-  background-image: url(../images/programming-notes-background.jpg);
-  -webkit-animation: .5s linear visible;
-     -moz-animation: .5s linear visible;
-       -o-animation: .5s linear visible;
-          animation: .5s linear visible;
-}
-#system-design:hover:before{
-  background-image: url(../images/system-design-background.jpg);
-  -webkit-animation: .5s linear visible;
-     -moz-animation: .5s linear visible;
-       -o-animation: .5s linear visible;
-          animation: .5s linear visible;
-}
-#java:hover:before{
-  background-image: url(../images/java-background.jpg);
-  -webkit-animation: .5s linear visible;
-     -moz-animation: .5s linear visible;
-       -o-animation: .5s linear visible;
-          animation: .5s linear visible;
-}
-#python:hover:before{
-  background-image: url(../images/python-background.jpg);
-  -webkit-animation: .5s linear visible;
-     -moz-animation: .5s linear visible;
-       -o-animation: .5s linear visible;
-          animation: .5s linear visible;
-}
-#javascript:hover:before{
-  background-image: url(../images/javascript-background.png);
-  -webkit-animation: .5s linear visible;
-     -moz-animation: .5s linear visible;
-       -o-animation: .5s linear visible;
-          animation: .5s linear visible;
-}
-#web-dev:hover:before{
-  background-image: url(../images/web-dev-background.png);
-  -webkit-animation: .5s linear visible;
-     -moz-animation: .5s linear visible;
-       -o-animation: .5s linear visible;
-          animation: .5s linear visible;
-}
-
-
-@-webkit-keyframes visible {
-  0% {opacity: 0;}
-  100% { opacity: 1; }
-}
-@-moz-keyframes  visible {
-  0% {opacity: 0;}
-  100% { opacity: 1; }
-}
-@-o-keyframes  visible {
-  0% {opacity: 0;}
-  100% { opacity: 1; }
-}
-@keyframes  visible {
-  0% {opacity: 0;}
-  100% { opacity: 1; }
-}
-
-.project-tile-content{
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   text-align: center;
 }
+
+
+.project-link{
+  display: flex;
+  flex: 25%;
+
+  position: relative;
+
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .project-tiles{margin: 100px 0px 0px 0px;}
+  .project-link{flex: 50%;}
+  #background{height:1468px;}
+}
+
+@media screen and (max-width: 700px) {
+  .project-link{flex: 100%;}
+  #background{height:2830px;}
+}
+
+
+
+.project-tile{
+  border-radius: 15px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  padding: 50px 10px;
+
+  align-items: center;
+  justify-content: center;
+
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  background-repeat: no-repeat;
+}
+
+
+
 
 .project-tile-img {
   min-width: 80px;
   max-width: 170px;
   height: auto;
-  margin-bottom: 40px;
-  filter: invert(100%) drop-shadow(3px 3px 3px #000) drop-shadow(3px 3px 7px #555);
+
+  margin-bottom: 30px;
+  filter: invert(100%) drop-shadow(0px 7px 3px #000);
+  transform: translateZ(80px);
 }
 
-.project-text{
-  position: relative;
-  font-size: 28px;
-  text-decoration: none;
-  font-weight: bolder;
+
+
+p{
+  margin: 0px;
+
   color: white;
-  text-shadow: 3px 3px 3px black, 3px 3px 5px #555;
-  z-index: 10;
+  font-size: 28px;
+  font-weight: bolder;
+
+  filter: drop-shadow(0px 7px 3px #000);
+  transform: translateZ(80px);
+
+  text-shadow: 2px 2px 2px black;
 }

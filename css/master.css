@@ -5,7 +5,9 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  -moz-box-sizing:border-box;
+   -webkit-box-sizing:border-box;
+   box-sizing:border-box;
   outline: none;
   scrollbar-width: thin;          /* "auto" or "thin"  */
   scrollbar-color: white black;   /* scroll thumb & track */
