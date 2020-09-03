@@ -10,32 +10,38 @@ body{
 
   width: 100%;
   height: 100%;
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-  background-size: 400% 400%;
-  background-repeat: no-repeat;
-  -webkit-animation: gradient 15s ease infinite, hue-rotate 5s linear infinite;
-     -moz-animation: gradient 15s ease infinite, hue-rotate 5s linear infinite;
-       -o-animation: gradient 15s ease infinite, hue-rotate 5s linear infinite;
-          animation: gradient 15s ease infinite, hue-rotate 5s linear infinite;
+  background-color: #23a6d5;
   z-index: -1;
+  -webkit-animation: hue-rotate 15s linear infinite;
+     -moz-animation: hue-rotate 15s linear infinite;
+       -o-animation: hue-rotate 15s linear infinite;
+          animation: hue-rotate 15s linear infinite;
 }
 
-/* TODO: make cross browser*/
+/* TODO: make all animations cross browser*/
 
-@keyframes gradient {
-0% {background-position: 0% 50%;}
-50% {background-position: 100% 50%;}
-100% {background-position: 0% 50%;}
+@keyframes hue-rotate {
+  from {
+    -webkit-filter: hue-rotate(0);
+    -moz-filter: hue-rotate(0);
+    -ms-filter: hue-rotate(0);
+    filter: hue-rotate(0);
+  }
+  to {
+    -webkit-filter: hue-rotate(360deg);
+    -moz-filter: hue-rotate(360deg);
+    -ms-filter: hue-rotate(360deg);
+    filter: hue-rotate(360deg);
+  }
 }
-
 
 #resume{
   position: relative;
   width: 96%;
 
-  margin: 30px auto 30px auto;
+  margin: 50px auto 50px auto;
 
-  border: 4px groove #fff !important;
+  border: 4px solid #fff !important;
   background-color: transparent;
   box-shadow: 0px 0px 15px 10px black;
 
@@ -57,33 +63,33 @@ body{
   background-position: center;
   background-repeat: no-repeat;
 
-  -webkit-animation: hue-rotate 4.3s linear infinite;
-     -moz-animation: hue-rotate 4.3s linear infinite;
-       -o-animation: hue-rotate 4.3s linear infinite;
-          animation: hue-rotate 4.3s linear infinite;
+  -webkit-animation: bright-rotate 15s linear infinite;
+     -moz-animation: bright-rotate 15s linear infinite;
+       -o-animation: bright-rotate 15s linear infinite;
+          animation: bright-rotate 15s linear infinite;
 }
 
-
-@keyframes hue-rotate {
+@keyframes bright-rotate {
   from {
-    -webkit-filter: saturate(5) hue-rotate(0);
-    -moz-filter: saturate(5) hue-rotate(0);
-    -ms-filter: saturate(5) hue-rotate(0);
-    filter: saturate(5) hue-rotate(0);
+    -webkit-filter: saturate(2) hue-rotate(0);
+    -moz-filter: saturate(2) hue-rotate(0);
+    -ms-filter: saturate(2) hue-rotate(0);
+    filter: saturate(2) hue-rotate(0);
   }
   to {
-    -webkit-filter: saturate(5) hue-rotate(360deg);
-    -moz-filter: saturate(5) hue-rotate(360deg);
-    -ms-filter: saturate(5) hue-rotate(360deg);
-    filter: saturate(5) hue-rotate(360deg);
+    -webkit-filter: saturate(2) hue-rotate(360deg);
+    -moz-filter: saturate(2) hue-rotate(360deg);
+    -ms-filter: saturate(2) hue-rotate(360deg);
+    filter: saturate(2) hue-rotate(360deg);
   }
 }
+
+
 
 .name>h1 {
   font-size: 70px;
   color: black;
   margin: 0 35% 30px 35%;
-  border-style: double;
   border-color: black;
   background: rgba(255,255,255,0.9);
   text-shadow: 2px 2px 2px grey;
@@ -94,7 +100,6 @@ body{
   font-size: 20px;
   color: black;
   margin: 0 40% 0 40%;
-  border-style: double;
   border-color: black;
   padding-bottom: 5px;
   background: rgba(255,255,255,0.9);
@@ -104,6 +109,7 @@ body{
 
 .name>h3 a {
   color: black;
+  text-decoration: underline;
 }
 
 .name>h3 a:hover{
@@ -119,14 +125,15 @@ body{
 /* About Section */
 
 .about {
-  background-color: #000;
-  border-top: 1px solid #FFF !important;
+  background-color: rgba(0, 0, 0,0.7);
+  border-top: 5px solid #FFF !important;
 }
 
 .about p{
   text-align: center;
   margin: 0 5% 0 5%;
   padding: 15px 0px 15px 0px;
+  text-shadow: 2px 2px 2px black;
 }
 
 /* Tabs */
@@ -143,8 +150,8 @@ body{
   font-size: 30px;
   padding: 5px 0 15px 0;
 
-  border-top: 6px groove #FFF !important;
-  border-bottom: 6px groove #FFF !important;
+  border-top: 5px solid #FFF !important;
+  border-bottom: 5px solid #FFF !important;
   box-shadow: inset 0 -3px 10px 10px black;
   text-shadow: 2px 2px 2px black;
 }
@@ -228,9 +235,13 @@ body{
   float: left;
 }
 .stars {
-  color:yellow;
+  color: lightblue;
   width: 150px;
   float: left;
+  -webkit-animation: hue-rotate 15s linear infinite;
+     -moz-animation: hue-rotate 15s linear infinite;
+       -o-animation: hue-rotate 15s linear infinite;
+          animation: hue-rotate 15s linear infinite;
 }
 
 
@@ -269,14 +280,12 @@ body{
 }
 
 .edu-tab img{
-  width: 250px;
   margin-right: 20px;
-  float: left;
   filter: drop-shadow(0 0 15px #FFE395);
 }
 
 .school p{
-  font-size: 24px;
+  font-size: 22px;
   margin: 10px 0;
 }
 
@@ -296,6 +305,7 @@ body{
 .accordion {
   background-color: #000;
   color: #FFF;
+  font-weight: bold;
   cursor: pointer;
   padding: 18px;
   width: 100%;
@@ -312,12 +322,20 @@ body{
 
 .panel {
   padding: 0 18px;
-  background-color: rgba(0, 0, 0,0.7);
+  background-color: rgba(0, 0, 0,0.4);
   display: none;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
   text-shadow: 1px 1px 1px black;
+}
+
+.panel>ul{
+  padding: 10px;
+}
+
+.panel>ul>li{
+  padding: 10px;
 }
 
 .accordion:after {
