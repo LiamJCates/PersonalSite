@@ -162,13 +162,13 @@
   text-decoration: none;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1400px) {
   .project-tiles{margin: 100px 0px 0px 0px;}
   .project-link{flex: 50%;}
   #background{height:1468px;}
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
   .project-link{flex: 100%;}
   #background{height:2830px;}
 }
