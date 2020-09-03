@@ -3,6 +3,10 @@ body{
   height: 100%;
 }
 
+#navbar {
+  background-color: rgba(0, 0, 0, .6);
+}
+
 #background {
   position: fixed;
   top: 0;
@@ -12,26 +16,26 @@ body{
   height: 100%;
   background-color: #23a6d5;
   z-index: -1;
-  -webkit-animation: hue-rotate 15s linear infinite;
-     -moz-animation: hue-rotate 15s linear infinite;
-       -o-animation: hue-rotate 15s linear infinite;
-          animation: hue-rotate 15s linear infinite;
+  -webkit-animation: dim-rotate 30s linear infinite;
+     -moz-animation: dim-rotate 30s linear infinite;
+       -o-animation: dim-rotate 30s linear infinite;
+          animation: dim-rotate 30s linear infinite;
 }
 
 /* TODO: make all animations cross browser*/
 
-@keyframes hue-rotate {
+@keyframes dim-rotate {
   from {
-    -webkit-filter: hue-rotate(0);
-    -moz-filter: hue-rotate(0);
-    -ms-filter: hue-rotate(0);
-    filter: hue-rotate(0);
+    -webkit-filter: brightness(40%) hue-rotate(0);
+    -moz-filter: brightness(40%) hue-rotate(0);
+    -ms-filter: brightness(40%) hue-rotate(0);
+    filter: brightness(40%) hue-rotate(0);
   }
   to {
-    -webkit-filter: hue-rotate(360deg);
-    -moz-filter: hue-rotate(360deg);
-    -ms-filter: hue-rotate(360deg);
-    filter: hue-rotate(360deg);
+    -webkit-filter: brightness(40%) hue-rotate(360deg);
+    -moz-filter: brightness(40%) hue-rotate(360deg);
+    -ms-filter: brightness(40%) hue-rotate(360deg);
+    filter: brightness(40%) hue-rotate(360deg);
   }
 }
 
@@ -43,7 +47,7 @@ body{
 
   border: 4px solid #fff !important;
   background-color: transparent;
-  box-shadow: 0px 0px 15px 10px black;
+  box-shadow: 2px 0px 10px 10px black;
 
   color: white;
 }
@@ -54,6 +58,7 @@ body{
   background: url(../images/resume-header.jpg);
   padding:80px 0 20px 0;
   text-align:center;
+  border: 2px solid black;
   align-items: center;
   background-attachment: relative;
   min-height: 400px;
@@ -63,24 +68,24 @@ body{
   background-position: center;
   background-repeat: no-repeat;
 
-  -webkit-animation: bright-rotate 15s linear infinite;
-     -moz-animation: bright-rotate 15s linear infinite;
-       -o-animation: bright-rotate 15s linear infinite;
-          animation: bright-rotate 15s linear infinite;
+  -webkit-animation: bright-rotate 30s linear infinite;
+     -moz-animation: bright-rotate 30s linear infinite;
+       -o-animation: bright-rotate 30s linear infinite;
+          animation: bright-rotate 30s linear infinite;
 }
 
 @keyframes bright-rotate {
   from {
-    -webkit-filter: saturate(2) hue-rotate(0);
-    -moz-filter: saturate(2) hue-rotate(0);
-    -ms-filter: saturate(2) hue-rotate(0);
-    filter: saturate(2) hue-rotate(0);
+    -webkit-filter: saturate(2) brightness(140%) hue-rotate(0);
+    -moz-filter: saturate(2) brightness(140%) hue-rotate(0);
+    -ms-filter: saturate(2) brightness(140%) hue-rotate(0);
+    filter: saturate(2) brightness(140%) hue-rotate(0);
   }
   to {
-    -webkit-filter: saturate(2) hue-rotate(360deg);
-    -moz-filter: saturate(2) hue-rotate(360deg);
-    -ms-filter: saturate(2) hue-rotate(360deg);
-    filter: saturate(2) hue-rotate(360deg);
+    -webkit-filter: saturate(2) brightness(140%) hue-rotate(360deg);
+    -moz-filter: saturate(2) brightness(140%) hue-rotate(360deg);
+    -ms-filter: saturate(2) brightness(140%) hue-rotate(360deg);
+    filter: saturate(2) brightness(140%) hue-rotate(360deg);
   }
 }
 
@@ -90,21 +95,21 @@ body{
   font-size: 70px;
   color: black;
   margin: 0 35% 30px 35%;
-  border-color: black;
+  border: 2px solid black;
   background: rgba(255,255,255,0.9);
   text-shadow: 2px 2px 2px grey;
-  box-shadow: 3px 3px 5px black;
+  box-shadow: 5px 5px 5px black;
 }
 
 .name>h3 {
   font-size: 20px;
   color: black;
   margin: 0 40% 0 40%;
-  border-color: black;
+  border: 2px solid black;
   padding-bottom: 5px;
   background: rgba(255,255,255,0.9);
   text-shadow: 1px 1px 1px grey;
-  box-shadow: 3px 3px 5px black;
+  box-shadow: 5px 5px 5px black;
 }
 
 .name>h3 a {
@@ -138,7 +143,7 @@ body{
 
 /* Tabs */
 .row{
-  background-color: #000;
+  background-color: transparent;
 }
 .row:after,.row:before {content:"";display:table;clear:both}
 
@@ -148,11 +153,11 @@ body{
   text-align: center;
   color: #FFF;
   font-size: 30px;
-  padding: 5px 0 15px 0;
+  padding: 10px 0 15px 0;
 
   border-top: 5px solid #FFF !important;
   border-bottom: 5px solid #FFF !important;
-  box-shadow: inset 0 -3px 10px 10px black;
+  box-shadow: inset -2px 0px 10px 10px black;
   text-shadow: 2px 2px 2px black;
 }
 
@@ -167,12 +172,13 @@ body{
 }
 
 .third:hover {
-  color:#000!important;
-  background-color:#fff!important;
-  border-bottom: 5px solid #999 !important;
+  background-color: transparent;
 }
 
-.tab-border{ border-bottom: 5px solid #FFF !important; }
+.tab-border{
+  border-bottom: 5px solid #FFF !important;
+  background-color: #000;
+}
 
 @media only screen and (max-width: 648px) { .row1{height: 70px} }
 @media only screen and (max-width: 455px) { .row1{height: 94px} }
@@ -191,16 +197,11 @@ body{
   word-wrap: break-word;
 }
 
-.third:hover p {
-  color: #000000;
-}
-
 
 
 .tab-container {
   padding: 16px 16px !important;
-  background-color: rgba(0, 0, 0,0.7);
-  box-shadow: inset 0 0px 10px 10px black;
+  background-color: rgba(0, 0, 0,0.5);
   border-top: 1px solid white;
   text-shadow: 2px 2px 2px black;
 }
@@ -234,16 +235,16 @@ body{
   width: 100px;
   float: left;
 }
+
 .stars {
   color: lightblue;
   width: 150px;
   float: left;
-  -webkit-animation: hue-rotate 15s linear infinite;
-     -moz-animation: hue-rotate 15s linear infinite;
-       -o-animation: hue-rotate 15s linear infinite;
-          animation: hue-rotate 15s linear infinite;
+  -webkit-animation: bright-rotate 30s linear infinite;
+     -moz-animation: bright-rotate 30s linear infinite;
+       -o-animation: bright-rotate 30s linear infinite;
+          animation: bright-rotate 30s linear infinite;
 }
-
 
 /* Tool Tab */
 
@@ -256,6 +257,7 @@ body{
 
 .tool-box{
   width: 400px;
+  margin: 5px 0px;
 }
 
 .category {
@@ -323,6 +325,7 @@ body{
 .panel {
   padding: 0 18px;
   background-color: rgba(0, 0, 0,0.4);
+  border: 1px solid #ccc;
   display: none;
   max-height: 0;
   overflow: hidden;
