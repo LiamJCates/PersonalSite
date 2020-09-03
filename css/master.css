@@ -47,7 +47,9 @@ a { text-decoration: none; }
   overflow:hidden;
 }
 
-.block-menu li { display: inline-block; }
+
+.block-menu{margin: 0px auto;}
+.block-menu li {display: inline-block;}
 
 .block-menu li a {
   color: white;
