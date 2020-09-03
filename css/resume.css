@@ -1,0 +1,51 @@
+body{
+  width: 100%;
+  height: 100%;
+}
+
+#background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  background-repeat: no-repeat;
+  animation: gradient 15s ease infinite;
+  z-index: -1;
+}
+
+/* TODO: make cross browser*/
+
+@keyframes gradient {
+0% {background-position: 0% 50%;}
+50% {background-position: 100% 50%;}
+100% {background-position: 0% 50%;}
+}
+
+
+#resume{
+  width: 96%;
+  height: 100%;
+
+  margin: 0px auto 80px auto;
+
+  border: 4px groove #fff !important;
+  background-color: #fff;
+  box-shadow: 0px 0px 15px 10px black;
+}
+
+
+
+.name{
+  background: url(../images/resume-header.jpg);
+  padding:80px 0 20px 0;
+  text-align:center;
+  align-items: center;
+  background-attachment: relative;
+  min-height: 400px;
+  word-wrap: break-word;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
