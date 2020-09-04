@@ -95,14 +95,14 @@
     #fedc00 0, #fedc00 100%);
   background-blend-mode: screen;
 
-  -webkit-animation: hue-rotate 3s linear infinite;
-     -moz-animation: hue-rotate 3s linear infinite;
-       -o-animation: hue-rotate 3s linear infinite;
-          animation: hue-rotate 3s linear infinite;
+  -webkit-animation: hue-rotate 30s linear infinite;
+     -moz-animation: hue-rotate 30s linear infinite;
+       -o-animation: hue-rotate 30s linear infinite;
+          animation: hue-rotate 30s linear infinite;
 }
 
-/*
-@keyframes  {
+
+@keyframes hue-rotate {
   from {
     -webkit-filter: hue-rotate(0);
     -moz-filter: hue-rotate(0);
@@ -117,7 +117,9 @@
   }
 
 }
-*/
+
+
+/*
 @keyframes hue-rotate {
   0% {
     -webkit-filter: hue-rotate(0);
@@ -138,7 +140,7 @@
     filter: hue-rotate(0);
     }
 }
-
+*/
 
 .project-tiles {
   width: 96%;
