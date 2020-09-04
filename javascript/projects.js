@@ -1,14 +1,15 @@
 /*  Projects Background */
-window.addEventListener("mousemove", function(event) {
-    windowWidth = document.getElementById("background").offsetWidth;
-    windowHeight = document.getElementById("background").offsetHeight;
+window.addEventListener("mousemove", function (event)
+{
+	windowWidth = document.getElementById("background").offsetWidth;
+	windowHeight = document.getElementById("background").offsetHeight;
 
-    mouseXpercentage = Math.round(event.pageX / windowWidth * 100);
-    mouseYpercentage = Math.round(event.pageY / windowHeight * 100);
+	mouseXpercentage = Math.round(event.pageX / windowWidth * 100);
+	mouseYpercentage = Math.round(event.pageY / windowHeight * 100);
 
-    document.getElementById("background").style.background =
-    'repeating-radial-gradient(circle at ' +
-    (mouseXpercentage-50) + '%' + (mouseYpercentage-105) + '%, \
+	document.getElementById("background").style.background =
+		'repeating-radial-gradient(circle at ' +
+		(mouseXpercentage - 50) + '%' + (mouseYpercentage - 105) + '%, \
     #fedc00 0, #fedc00 calc(01/35 * 100%),\
     #fcb712 0, #fcb712 calc(02/35 * 100%),\
     #f7921e 0, #f7921e calc(03/35 * 100%),\
@@ -44,8 +45,8 @@ window.addEventListener("mousemove", function(event) {
     #f7921e 0, #f7921e calc(33/35 * 100%),\
     #fcb712 0, #fcb712 calc(34/35 * 100%),\
     #fedc00 0, #fedc00 100%),' +
-    'repeating-radial-gradient(circle at ' +
-    (mouseXpercentage+50) + '%' + (mouseYpercentage-105) + '%,\
+		'repeating-radial-gradient(circle at ' +
+		(mouseXpercentage + 50) + '%' + (mouseYpercentage - 105) + '%,\
     #fedc00 0, #fedc00 calc(01/35 * 100%),\
     #fcb712 0, #fcb712 calc(02/35 * 100%),\
     #f7921e 0, #f7921e calc(03/35 * 100%),\
@@ -85,47 +86,37 @@ window.addEventListener("mousemove", function(event) {
 
 
 /* Tiles */
-function updateReflection(project){
-  var element = document.getElementById(project);
-  var backgroundFilePath = "images/";
-  var backgroundFileName = "-background.png";
-  var imgUrl = backgroundFilePath + project + backgroundFileName;
+function updateReflection(project)
+{
+	var element = document.getElementById(project);
+	var backgroundFilePath = "images/";
+	var backgroundFileName = "-background.png";
+	var imgUrl = backgroundFilePath + project + backgroundFileName;
 
-  var bodyRect = document.body.getBoundingClientRect(),
-    elemRect = element.getBoundingClientRect(),
-    offset   = elemRect.top - bodyRect.top;
+	var bodyRect = document.body.getBoundingClientRect(),
+		elemRect = element.getBoundingClientRect(),
+		offset = elemRect.top - bodyRect.top;
 
-  let adjustedX = event.pageX - elemRect.left;
-  let adjustedY = event.pageY - offset;
-  let halfWidth = element.clientWidth/2;
-  let halfHeight = element.clientHeight/2;
-  let xdeg = (adjustedX - halfWidth)/halfWidth;
-  let ydeg = (adjustedY - halfHeight)/halfHeight;
-/*
-  console.log("mouseX: " + event.pageX);
-  console.log("mouseY: " + event.pageY);
-  console.log("elementX: " + elemRect.left);
-  console.log("elementY: " + offset);
-  console.log("adjustedX: " + adjustedX);
-  console.log("adjustedY: " + adjustedY);
-  console.log("halfWidth: " + halfWidth);
-  console.log("halfHeight: " + halfHeight);
-  console.log("xdeg: " + xdeg);
-  console.log("ydeg: " + ydeg);
-*/
+	let adjustedX = event.pageX - elemRect.left;
+	let adjustedY = event.pageY - offset;
+	let halfWidth = element.clientWidth / 2;
+	let halfHeight = element.clientHeight / 2;
+	let xdeg = (adjustedX - halfWidth) / halfWidth;
+	let ydeg = (adjustedY - halfHeight) / halfHeight;
 
-  element.style.transform = `rotateX(${ydeg * 15}deg) rotateY(${xdeg * 15}deg)`;
+	element.style.transform = `rotateX(${ydeg * 15}deg) rotateY(${xdeg * 15}deg)`;
 
-  let degree = ydeg * 180;
-  let percentage = xdeg * 100;
-  element.style.background = `linear-gradient(${degree}deg, rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) ${percentage}%,rgba(255,255,255,0) 100%), url('${imgUrl}')`;
+	let degree = ydeg * 180;
+	let percentage = xdeg * 100;
+	element.style.background = `linear-gradient(${degree}deg, rgba(255,255,255,0) 0%,rgba(255,255,255,0.5) ${percentage}%,rgba(255,255,255,0) 100%), url('${imgUrl}')`;
 
-  element.style.backgroundSize = "cover";
-  element.style.backgroundPosition = "center";
+	element.style.backgroundSize = "cover";
+	element.style.backgroundPosition = "center";
 }
 
-function resetReflection(project){
-  var element = document.getElementById(project);
-  element.style.transform = `rotateX(0deg) rotateY(0deg)`;
-  element.style.background = 'transparent';
+function resetReflection(project)
+{
+	var element = document.getElementById(project);
+	element.style.transform = `rotateX(0deg) rotateY(0deg)`;
+	element.style.background = 'transparent';
 }
