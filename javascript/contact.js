@@ -20,15 +20,6 @@ function openNav(){
 /* Contact Background */
 "use strict";
 
-/**
-* Written by Dillon https://codepen.io/Dillo
-*
-* Inspired in very large part by Alex Andrix's work on Codepen
-* https://codepen.io/alexandrix/pen/jgyWww
-* @author Alex Andrix <alex@alexandrix.com>
-* @since 2019
-*/
-
 var nbEddies = 2;
 var nbParticles = 300; // number of particlez
 var lifeTime = 20; // average lifetime of particlez
@@ -38,7 +29,7 @@ function changeRange(input, fill) {
   var max = document.getElementById(input).max;
 
   var percent = value/max * 100;
-  if(percent >= 90) percent -= .5; 
+  if(percent >= 90) percent -= .5;
 
   document.getElementById(fill).style.width = percent+ '%';
 }
