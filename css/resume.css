@@ -130,11 +130,13 @@ body{
 .name>h3 a {
   color: black;
   text-decoration: underline;
+  text-shadow: 2px 2px 2px grey;
 }
 
 .name>h3 a:hover{
-  color: white;
+  color: #888;
   border-bottom: none;
+  text-shadow: 2px 2px 2px black;
 }
 
 @media only screen and (max-width: 1340px) {
