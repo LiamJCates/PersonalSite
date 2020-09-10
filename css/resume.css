@@ -222,11 +222,14 @@ body{
 }
 
 .tab-container a {
-    color: black;
-    text-shadow: 1px 1px 1px black;
+    text-decoration: underline;
+    color: grey;
 }
 
-.tab-container a:hover { color: white; }
+.tab-container a:hover {
+  color: white;
+  text-shadow: 1px 1px 1px black;
+}
 
 
 /* Languages Tab*/
@@ -288,7 +291,6 @@ body{
 
 
 /* Education Tab */
-
 .edu-tab{
   display: flex;
   flex-wrap: wrap;
@@ -298,10 +300,10 @@ body{
 
 .edu-tab>img{
   border-radius: 50%;
-  margin-right: 20px;
-  background-color: rgba(255,227,149,.5);//#FFE395; 
+  margin-top: 20px;
+  margin-left: 20px;
+  background-color: rgba(255,227,149,.5);//#FFE395;
 }
-
 
 .school p{
   font-size: 22px;
