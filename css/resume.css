@@ -16,28 +16,13 @@ body{
   height: 100%;
   background-color: rgba(35, 166, 213, 1); //#23a6d5;
 
-  -webkit-animation: dim-rotate 60s linear infinite;
-     -moz-animation: dim-rotate 60s linear infinite;
-       -o-animation: dim-rotate 60s linear infinite;
-          animation: dim-rotate 60s linear infinite;
+  -webkit-animation: hue-rotate 60s linear infinite;
+     -moz-animation: hue-rotate 60s linear infinite;
+       -o-animation: hue-rotate 60s linear infinite;
+          animation: hue-rotate 60s linear infinite;
 }
 
 /* TODO: make all animations cross browser*/
-
-@keyframes dim-rotate {
-  from {
-    -webkit-filter: brightness(40%) hue-rotate(0);
-    -moz-filter: brightness(40%) hue-rotate(0);
-    -ms-filter: brightness(40%) hue-rotate(0);
-    filter: brightness(40%) hue-rotate(0);
-  }
-  to {
-    -webkit-filter: brightness(40%) hue-rotate(360deg);
-    -moz-filter: brightness(40%) hue-rotate(360deg);
-    -ms-filter: brightness(40%) hue-rotate(360deg);
-    filter: brightness(40%) hue-rotate(360deg);
-  }
-}
 
 @keyframes hue-rotate {
   from {
