@@ -139,12 +139,30 @@ body{
 }
 
 .third:hover {
-  background-color: transparent;
+  background-color: #ccc;
+  color: black;
+  cursor: pointer;
+}
+
+.third p {
+  margin: 0px;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 18px;
+  word-wrap: break-word;
 }
 
 .tab-border{
   border-bottom: 5px solid #FFF !important;
-  background-color: #000;
+  background-color: rgba(0, 0, 0, .3);
+  text-shadow: 3px 3px 3px black;
+  box-shadow: inset 1px 2px 4px 4px black;
+}
+
+.tab-border:hover {
+  background-color: rgba(0, 0, 0, .3);
+  color: white;
+  cursor: auto;
 }
 
 @media only screen and (max-width: 648px) { .row1{height: 70px} }
@@ -155,20 +173,10 @@ body{
 @media only screen and (max-width: 246px) { .row2{height: 94px} }
 @media only screen and (max-width: 213px) { .row2{height: 108px} }
 
-.third p {
-  color: #f4f2ee;
-  margin: 0px;
-  text-align: center;
-  font-weight: bolder;
-  font-size: 18px;
-  word-wrap: break-word;
-}
-
 /* Common Tab-Container Styles */
 .tab-container {
   padding: 16px 16px !important;
   background-color: rgba(0, 0, 0,0.5);
-  border-top: 1px solid white;
   text-shadow: 2px 2px 2px black;
 }
 
@@ -314,7 +322,7 @@ body{
 .accordion:after {
   content: '\02795'; /* Unicode character for "plus" sign (+) */
   font-size: 13px;
-  color: #777;
+  color: white;
   float: right;
   margin-left: 5px;
 }
