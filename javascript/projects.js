@@ -1,9 +1,9 @@
 /*  Projects Background */
+windowWidth = document.getElementById("background").offsetWidth;
+windowHeight = document.getElementById("background").offsetHeight;
+
 window.addEventListener("mousemove", function (event)
 {
-	windowWidth = document.getElementById("background").offsetWidth;
-	windowHeight = document.getElementById("background").offsetHeight;
-
 	mouseXpercentage = Math.round(event.pageX / windowWidth * 100);
 	mouseYpercentage = Math.round(event.pageY / windowHeight * 100);
 
@@ -101,9 +101,12 @@ function updateReflection(project)
 	let adjustedY = event.pageY - offset;
 	let halfWidth = element.clientWidth / 2;
 	let halfHeight = element.clientHeight / 2;
+	/*
 	let xdeg = (adjustedX - halfWidth) / halfWidth;
 	let ydeg = (adjustedY - halfHeight) / halfHeight;
-
+	*/
+	let xdeg = (adjustedX / halfWidth) - 1;
+	let ydeg = (adjustedY / halfHeight) - 1;
 	element.style.transform = `rotateX(${ydeg * 15}deg) rotateY(${xdeg * 15}deg)`;
 
 	let degree = ydeg * 180;
