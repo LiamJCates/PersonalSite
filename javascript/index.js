@@ -3850,9 +3850,9 @@ THREE.ExtrudeGeometry.prototype = Object.create(THREE.Geometry.prototype);
 
 
 /* Non-framework code */
-var SEPARATION = 150,
-    AMOUNTX = 40,
-    AMOUNTY = 40;
+var SEPARATION = 256,
+    AMOUNTX = 30,
+    AMOUNTY = 30;
 
 var container;
 var camera, scene, renderer;
@@ -3887,7 +3887,7 @@ function init() {
         program: function(context) {
 
             context.beginPath();
-            context.arc(0, 0, .6, 0, PI2, true);
+            context.arc(0, 0, 1, 0, PI2, true);
             context.fill();
 
         }
@@ -3895,14 +3895,15 @@ function init() {
     });
 
     var i = 0;
-
+    var halfAX = AMOUNTX/2;
+    var halfAY = AMOUNTY/2;
     for (var ix = 0; ix < AMOUNTX; ix++) {
 
         for (var iy = 0; iy < AMOUNTY; iy++) {
 
             particle = particles[i++] = new THREE.Particle(material);
-            particle.position.x = ix * SEPARATION - ((AMOUNTX * SEPARATION) / 2);
-            particle.position.z = iy * SEPARATION - ((AMOUNTY * SEPARATION) / 2);
+            particle.position.x = SEPARATION * (ix - halfAX);
+            particle.position.z = SEPARATION * (iy - halfAY);
             scene.add(particle);
 
         }
@@ -3914,8 +3915,8 @@ function init() {
     container.appendChild(renderer.domElement);
 
     document.body.addEventListener('mousemove', onDocumentMouseMove, false);
-    document.getElementById('welcome-section').addEventListener('touchstart', onDocumentTouchStart, false);
-    document.getElementById('welcome-section').addEventListener('touchmove', onDocumentTouchMove, false);
+    document.body.addEventListener('touchstart', onDocumentTouchStart, false);
+    document.body.addEventListener('touchmove', onDocumentTouchMove, false);
 
     window.addEventListener('resize', onWindowResize, false);
 
@@ -3977,8 +3978,8 @@ function animate() {
 
 function render() {
 
-    camera.position.x += (mouseX - camera.position.x) * .05;
-    camera.position.y += (-mouseY - camera.position.y) * .05;
+    camera.position.x += (mouseX - camera.position.x) * .01;
+    camera.position.y += (-mouseY - camera.position.y) * .01;
     camera.lookAt(scene.position);
 
     var i = 0;
@@ -3988,8 +3989,11 @@ function render() {
         for (var iy = 0; iy < AMOUNTY; iy++) {
 
             particle = particles[i++];
-            particle.position.y = (Math.sin((ix + count) * 0.3) * 50) + (Math.sin((iy + count) * 0.5) * 50);
-            particle.scale.x = particle.scale.y = (Math.sin((ix + count) * 0.3) + 1) * 2 + (Math.sin((iy + count) * 0.5) + 1) * 2;
+            particle.position.y =
+            ((Math.sin((ix + count) * 0.3)) +
+             (Math.sin((iy + count) * 0.5))) * 128;
+            particle.scale.x = particle.scale.y = ((Math.sin((ix + count) * 0.3) + 1) +
+             (Math.sin((iy + count) * 0.5) + 1)) * 2;
 
         }
 
@@ -3997,6 +4001,6 @@ function render() {
 
     renderer.render(scene, camera);
 
-    count += 0.1;
+    count += .1;
 
 }
