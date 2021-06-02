@@ -1,0 +1,21 @@
+Attributions
+
+Backgrounds
+Data Structures: https://pixabay.com/illustrations/binary-null-one-digital-blue-797274/ 
+Algorithms: https://pixabay.com/illustrations/mathematics-formula-physics-school-1235606/
+Python: https://unsplash.com/photos/d0CasEMHDQs
+Java: https://pixabay.com/photos/coffee-cup-coffee-beans-coffee-cup-171653/
+Programming Notes: https://unsplash.com/photos/KgLtFCgfC28
+Javascript: https://pixabay.com/photos/web-design-coding-web-developing-2906159/
+
+Icons
+Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+
+Resume
+
+Header Background: https://pixabay.com/illustrations/block-chain-data-hand-record-5173445/
+
+Daily:	(1 hour each)
+
+Applications
+	https://angel.co/jobs/signup?source=homepage
