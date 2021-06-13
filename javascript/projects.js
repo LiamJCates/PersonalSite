@@ -86,9 +86,29 @@ window.addEventListener("mousemove", function (event)
 
 
 /* Tiles */
+var images = [];
+function preload() {
+    for (var i = 0; i < arguments.length; i++) {
+        images[i] = new Image();
+        images[i].src = preload.arguments[i];
+    }
+}
+
+preload(
+    "images/algorithms-background.png",
+		"images/data-structures-background.png",
+		"images/system-design-background.png",
+		"images/programming-notes-background.png",
+		"images/java-background.png",
+		"images/python-background.png",
+		"images/javascript-background.png",
+		"images/web-dev-background.png"
+);
+
 function updateReflection(project)
 {
 	var element = document.getElementById(project);
+
 	var backgroundFilePath = "images/";
 	var backgroundFileName = "-background.png";
 	var imgUrl = backgroundFilePath + project + backgroundFileName;
@@ -101,10 +121,7 @@ function updateReflection(project)
 	let adjustedY = event.pageY - offset;
 	let halfWidth = element.clientWidth / 2;
 	let halfHeight = element.clientHeight / 2;
-	/*
-	let xdeg = (adjustedX - halfWidth) / halfWidth;
-	let ydeg = (adjustedY - halfHeight) / halfHeight;
-	*/
+
 	let xdeg = (adjustedX / halfWidth) - 1;
 	let ydeg = (adjustedY / halfHeight) - 1;
 	element.style.transform = `rotateX(${ydeg * 15}deg) rotateY(${xdeg * 15}deg)`;
