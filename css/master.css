@@ -72,3 +72,10 @@ a { text-decoration: none; }
   transition: 0.25s;
 
 }
+
+@media screen and (max-width: 500px), screen and (max-height: 300px) {
+  .block-menu li a{
+    font-size: 20px;
+    line-height: 15px;
+  }
+}

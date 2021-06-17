@@ -84,8 +84,6 @@
   .first{font-size: 5em;}
   .last{font-size: 6em;}
   #messenger { font-size: 20px; }
-  .mouse{ margin: 20px auto;}
-  .scroll{ font-size:10px;}
 }
 
 @media screen and (max-width: 400px), screen and (max-height: 300px) {
